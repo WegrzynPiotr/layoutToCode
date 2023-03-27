@@ -1,9 +1,14 @@
-.news{
-    font-family: "Poppins";
-    margin-top:52px;
+.news {
+    margin-top: 52px;
     max-width: 1500px;
-        h2{
-            text-align: center;       
 
-        }
+    h2 {
+        font-family: "DM Sans", sans-serif;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .article__container {
+        display: block;
+    }
 }

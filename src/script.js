@@ -25,11 +25,11 @@ teraz od czasu do czasu otrzymasz od nas maila,
 na adres, który podałeś w formularzu ${email}.
 Dziękujemy za zaufanie :)
 `;
-const closeBtn = document.createElement("button");
-closeBtn.id = "close__button";
-closeBtn.textContent = "X";
-popup.appendChild(closeBtn);
-removePopup(closeBtn,popup);
+    const closeBtn = document.createElement("button");
+    closeBtn.id = "close__button";
+    closeBtn.textContent = "X";
+    popup.appendChild(closeBtn);
+    removePopup(closeBtn, popup);
 }
 
 const createPopup = () => {
@@ -48,10 +48,10 @@ const createPopup = () => {
 }
 
 
-const removePopup = (button,element) => {
-        button.addEventListener("click",()=>{
-            element.remove();
-        })
+const removePopup = (button, element) => {
+    button.addEventListener("click", () => {
+        element.remove();
+    })
 }
 
 const submitHandler = (e) => {

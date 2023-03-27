@@ -1,11 +1,12 @@
     main {
-        margin:0 auto;
+        margin: 0 auto;
         max-width: 1500px;
         display: grid;
         grid-template-columns: 1fr 1fr;
+
         @media (max-width:1067px) {
             grid-template-columns: 1fr;
-        } 
+        }
     }
 
     .article__container,
@@ -18,13 +19,15 @@
     .article__container {
         margin-top: 52px;
         margin-left: 118px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+
         @media (max-width:1067px) {
-            margin-top:20px;
-            margin-left:1rem;
-        } 
+            margin-top: 20px;
+            margin-left: 1rem;
+        }
+
+        .article__main {
+            padding-left: 3rem;
+        }
 
         h2 {
             display: flex;
@@ -52,14 +55,14 @@
             }
         }
 
-        .article__photo {
-            img {
-                width: 100%;
-                height: 50px;
-                object-fit: cover;
-                margin-bottom: -5px;
-            }
+
+        img {
+            width: 100%;
+            height: 50px;
+            object-fit: cover;
+            margin-bottom: -5px;
         }
+
 
     }
 
@@ -71,11 +74,12 @@
         margin-top: -1.5rem;
         background-color: rgba(199, 187, 149, 1);
         background-image: $boxGradient;
-        @media (max-width:1067px){
-            margin-top:0;
+
+        @media (max-width:1067px) {
+            margin-top: 0;
             min-height: 450px;
-            
         }
+
         h2 {
             margin-bottom: 22px;
         }
@@ -85,6 +89,7 @@
             flex-direction: column;
 
             &>*:not(button):not(label) {
+                color: #282529;
                 font-family: "Poppins";
                 background-color: transparent;
                 margin-bottom: 22px;
@@ -92,14 +97,17 @@
                 border-bottom: 1px solid rgb(242, 238, 227);
             }
 
-            input {
+            input,
+            select {
                 outline-color: $articlePrimary;
+                padding-bottom: 5px;
 
                 &::placeholder {
                     color: $articlePrimary;
                 }
 
             }
+
         }
 
         label {
@@ -113,15 +121,17 @@
             font-family: "Poppins", sans-serif;
             font-size: .5rem;
         }
-        #checkbox,button{
+
+        #checkbox,
+        button {
             cursor: pointer;
         }
 
-        #checkbox{
+        #checkbox {
             transform: scale(1.4);
         }
 
-        .invalid{
+        .invalid {
             color: rgb(200, 16, 16);
         }
 
@@ -129,12 +139,18 @@
             position: absolute;
             bottom: 0;
             left: 0;
-            right: 0;
+            width: 100%;
+            margin-right: 20px;
+            font-family: "DM Sans", sans-serif;
             line-height: 50px;
             border: none;
             text-transform: uppercase;
             font-weight: bold;
             background-color: rgba(183, 172, 137, 1);
             background-image: $buttonGradient;
+
+            &:hover {
+                background-image: $boxGradient;
+            }
         }
     }
