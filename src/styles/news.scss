@@ -9,6 +9,10 @@
     }
 
     .article__container {
+        .article__main {
+            padding-left: 0;
+        }
+
         display: block;
     }
 }
